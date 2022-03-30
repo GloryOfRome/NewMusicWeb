@@ -1,0 +1,27 @@
+﻿
+@model List<Bought>
+@{
+    ViewBag.Title = "ShowUserBought";
+}
+
+<h2>Show all song User Bought</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        Select the user: @Html.DropDownList("UserId")<br />
+        <input type="submit" value="show result" />
+    </div>
+}
+
+@if (Model != null)
+{
+    <ul>
+        @foreach (var song in Model)
+        {
+            <li>
+                @song.Song.Name
+            </li>
+        }
+    </ul>
+}

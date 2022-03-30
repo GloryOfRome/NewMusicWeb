@@ -1,0 +1,17 @@
+﻿
+@model List<Artist>
+@{
+    ViewBag.Title = "TopArtist";
+}
+
+<h2>Top Artist</h2>
+
+<ul>
+    @foreach (var artist in Model)
+    {
+        <li>
+            Show the highest number of copies of his songs<br />
+            Artist: @artist.Name
+        </li>
+    }
+</ul>

@@ -1,0 +1,26 @@
+﻿
+@model User
+
+@{
+    ViewBag.Title = "Show Music List";
+}
+
+<h2>The user:  @ViewBag.User.Name </h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        Select the music: @Html.DropDownList("SongId")<br />
+        <input type="submit" value="* Buy *" />
+    </div>
+
+}
+
+
+@if (Model != null)
+{
+    <h1>
+        @ViewBag.Status
+    </h1>
+}
+

@@ -1,0 +1,22 @@
+﻿
+
+@model Nullable<int>
+@{
+    ViewBag.Title = "ShowHowManyUserBuy";
+}
+
+<h2>Show How Many User Buy</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        Select the song: @Html.DropDownList("SongId")<br />
+        <input type="submit" value="search" />
+    </div>
+}
+@if (Model != null)
+{
+    <div>
+        The result is: @Model
+    </div>
+}
